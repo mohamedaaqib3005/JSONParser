@@ -8,3 +8,13 @@ const number = Number(match[0]);
 const remaining = input.slice(match[0].length);
 return [number,remaining];
 }
+
+
+function trueParser(input) {
+    if (!input.startsWith("true")) {
+      return null;
+    }
+    const remaining = input.slice(4);
+    return [true, remaining];
+  }
+  
